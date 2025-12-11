@@ -1,5 +1,3 @@
-# Ingore data file
-data/
 # History files
 .Rhistory
 .Rapp.history

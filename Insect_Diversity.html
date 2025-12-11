@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ixel">
+
+<title>Urban Insect Biodiversity: Effects of Drought-Tolerant Plants</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Insect_Diversity_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Insect_Diversity_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Insect_Diversity_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Insect_Diversity_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Insect_Diversity_files/libs/quarto-html/popper.min.js"></script>
+<script src="Insect_Diversity_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Insect_Diversity_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Insect_Diversity_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Insect_Diversity_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Insect_Diversity_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Insect_Diversity_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Insect_Diversity_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Urban Insect Biodiversity: Effects of Drought-Tolerant Plants</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ixel </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="background-information" class="level2">
+<h2 class="anchored" data-anchor-id="background-information">Background Information</h2>
+<p>Urban areas are expanding globally, yet we know little about how landscaping choice affect urban biodiversity. Los Angeles, a naturally arid Mediterranean climate, presents a unique opportunity to examine whether drought-tolerant landscaping supports insect diversity.</p>
+<p><strong>Research Questions:</strong></p>
+<ol type="1">
+<li>Do drought-tolerant plants increase insect species richness in urban Los Angeles?</li>
+</ol>
+<p>$$ <span class="math display">\[\begin{align}
+Drought-Tolerant Plants \\
+H₀: β₁ = 0 \\
+
+Hᴀ: β₁ &gt; 0
+
+\end{align}\]</span> $$</p>
+<ol start="2" type="1">
+<li>Do drought-tolerant plants and local temperature interact to affect insect species richness in urban Los Angeles?</li>
+</ol>
+<p>$$ <span class="math display">\[\begin{align}
+Temperature \\
+H₀: β₂ = 0 \\
+Hᴀ: β₂ ≠ 0
+
+\end{align}\]</span> $$</p>
+<p><strong>Hypothesis:</strong></p>
+<p>Sites with drought-tolerant plants have higher insect species richness than sites without drought-tolerant plants, after accounting for temperature and Urban Type.</p>
+</section>
+<section id="directed-acyclic-graph-dag" class="level1">
+<h1>Directed Acyclic Graph (DAG)</h1>
+<p>A conceptual model (figure 1.) represents the hypothesized causal relationships among variables:</p>
+<p><strong>Direct effect on species richness:</strong></p>
+<ul>
+<li><p><strong>Drought-tolerant plants</strong> (main predictor): Assume these plants provide better habitat for insects in LA’s arid climate.</p></li>
+<li><p><strong>Mean Temperature:</strong> Local Microclimate may directly affect insect activty and survival.</p></li>
+<li><p><strong>Urban Type:</strong> Development intensity affects habitat quality and availability.</p></li>
+</ul>
+<p><strong>Confounding Relationships:</strong></p>
+<ul>
+<li>Urbanization influences <em>both</em> plant choice (people in different urban contexts make different landscaping decisions) <em>and</em> local temperature (urban heat island effect), therefore we must control for urban type to isolate the effects of drought tolerant plants.</li>
+</ul>
+<p><strong>Importance:</strong></p>
+<p>To estimate the <em>true effect</em> of drought-tolerant plants on species richness, we include both temperature and urbanization as covariates in our model. This accounts for confounding and allows us to answer: <code>"Do drought plants increase richness *independent of* urbanization and temperature?"</code></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-dag" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Insect_Diversity_files/figure-html/fig-dag-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Causal diagram showing hypothesized relationships affecting species richness
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>What the Arrows Mean:</strong></p>
+<ul>
+<li><p>Urbanization → Drought Plants “Urbanization affects which plants people choose”</p></li>
+<li><p>Urbanization → Temperature<br>
+“Urban heat island: cities are hotter”</p></li>
+<li><p>Urbanization → Richness “Urbanization directly affects habitat quality”</p></li>
+<li><p>Drought Plants → Richness “Our main hypothesis: drought plants help insects”</p></li>
+<li><p>Temperature → Richness “Temperature affects insect survival”</p></li>
+</ul>
+<p>The causal model shows that urbanization is a key confounder: it affects both plant choice and local temperature while also directly impacting species richness.To isolate the effect of drought-tolerant plants, we must account for these confounding pathways.</p>
+</section>
+<section id="about-the-data" class="level1">
+<h1>About the data:</h1>
+<p>The data used for this analysis was obtained from Adams et al.&nbsp;(2020), who sampled insects monthly at 30 sites across Los Angeles County throughout 2014.</p>
+</section>
+<section id="befoe-modeling" class="level1">
+<h1>Befoe Modeling:</h1>
+<p><strong>Site-level aggregation:</strong> To avoid pseudoreplication from repeated monthly sampling, we averaged species richness and temperature across the year for each site, yielding 30 independent observations.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate: 30 independent sites, average each site across all 12 months</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>site_data <span class="ot">&lt;-</span> insect_clean <span class="sc">%&gt;%</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Site, Drought) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_richness =</span> <span class="fu">mean</span>(CorRich), <span class="co"># across the year</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_temp =</span> <span class="fu">mean</span>(Temp_Mean),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_months =</span> <span class="fu">n</span>(), <span class="co"># 12 for every site </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Urban_Type =</span> <span class="fu">unique</span>(Urban_Type), </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(site_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Site    Drought  mean_richness      mean_temp        n_months  Urban_Type
+ 1      : 1   No :20   Min.   :0.5833   Min.   :18.56   Min.   :12   1:1       
+ 3      : 1   Yes:10   1st Qu.:2.2704   1st Qu.:19.25   1st Qu.:12   3:7       
+ 4      : 1            Median :3.0831   Median :19.49   Median :12   4:4       
+ 5      : 1            Mean   :2.9709   Mean   :19.45   Mean   :12   5:4       
+ 6      : 1            3rd Qu.:3.5729   3rd Qu.:19.74   3rd Qu.:12   6:2       
+ 7      : 1            Max.   :4.8298   Max.   :20.10   Max.   :12   8:5       
+ (Other):24                                                          9:7       </code></pre>
+</div>
+</div>
+</section>
+<section id="exploratory-visualizations" class="level1">
+<h1>Exploratory Visualizations</h1>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Insect_Diversity_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-simulation-according-to-model-assumptions" class="level1">
+<h1>Data Simulation According to Model Assumptions</h1>
+<p>We used a Negative Binomial generalized linear model:</p>
+<p><span class="math display">\[
+\begin{align}
+Richness \sim \text{Negative Binomial}\,(\mu, \sigma) \\
+log(\mu) = \beta_{0} + \beta_{1}\, \text{Drought-Tolerant Plants} + \beta_{2}\, \text{Mean Temperature} + \beta_{3} \, \text{Urban Type}
+\end{align}
+\]</span></p>
+<p><strong>Why Negative Binomial?</strong></p>
+<ul>
+<li>Count data (species richness)</li>
+<li>More flexible than Poisson for ecological data</li>
+<li>Accounts for potential overdispersion</li>
+</ul>
+<p><strong>Hypotheses:</strong></p>
+<ul>
+<li>H₀: β₁ = 0 (drought plants have no effect)</li>
+<li>Hᴀ: β₁ &gt; 0 (drought plants increase richness)</li>
+</ul>
+<section id="model-validation-parameter-recovery" class="level2">
+<h2 class="anchored" data-anchor-id="model-validation-parameter-recovery">Model Validation: Parameter Recovery</h2>
+<p>To demonstrate our model is correctly specified, we first simulated data with known parameter values, then fit our model to recover those parameters.</p>
+<p>Below we will use the <code>glm.nb</code> function from the <code>MASS</code> package to estimate negative binomial regressions:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>) <span class="co"># For reproducibility</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># set True Coefficients and parameters</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>beta_0 <span class="ot">&lt;-</span> <span class="fl">1.0</span> <span class="co"># mean richness (baseline)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>beta_1 <span class="ot">&lt;-</span> <span class="fl">0.35</span> <span class="co"># Drought Tolerant plants presence</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>beta_2 <span class="ot">&lt;-</span> <span class="fl">0.08</span> <span class="co"># mean temp</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>beta_3 <span class="ot">&lt;-</span> <span class="fl">0.05</span> <span class="co"># Moderate vs low urban type</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>beta_4 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">0.10</span> <span class="co"># High vs low urban type </span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="co"># Dispersion (NB size parameter)</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample size</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100000</span> </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate predictors</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>drought <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                    <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.67</span>, <span class="fl">0.33</span>)), <span class="co"># 33% yes, 67% no</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                   <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>mean_temp<span class="ot">&lt;-</span> <span class="fu">runif</span>(n, <span class="at">min =</span> <span class="fl">18.5</span>, <span class="at">max =</span> <span class="fl">20.1</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>urban_type <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"Less"</span>, <span class="st">"Moderate"</span>, <span class="st">"High"</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Less"</span>, <span class="st">"Moderate"</span>, <span class="st">"High"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected mean (inverse link of log) </span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="fu">exp</span>(beta_0 <span class="sc">+</span> beta_1 <span class="sc">*</span> (drought <span class="sc">==</span> <span class="st">"Yes"</span>) <span class="sc">+</span> </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>            beta_2 <span class="sc">*</span> mean_temp <span class="sc">+</span> </span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>            beta_3 <span class="sc">*</span> (urban_type <span class="sc">==</span> <span class="st">"Moderate"</span>) <span class="sc">+</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>            beta_4 <span class="sc">*</span> (urban_type <span class="sc">==</span> <span class="st">"High"</span>))  </span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random NB numbers</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>mean_richness <span class="ot">&lt;-</span> <span class="fu">rnbinom</span>(<span class="at">n =</span> n, <span class="at">size =</span> theta, <span class="at">mu =</span> mu)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co">#  Fit model to simulated data</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>simulation_model <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(mean_richness <span class="sc">~</span> drought <span class="sc">+</span> mean_temp <span class="sc">+</span> urban_type)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(simulation_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm.nb(formula = mean_richness ~ drought + mean_temp + urban_type, 
+    init.theta = 2.996774373, link = log)
+
+Coefficients:
+                    Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)         1.079511   0.084244   12.81   &lt;2e-16 ***
+droughtYes          0.357126   0.004246   84.11   &lt;2e-16 ***
+mean_temp           0.075580   0.004359   17.34   &lt;2e-16 ***
+urban_typeModerate  0.055572   0.004923   11.29   &lt;2e-16 ***
+urban_typeHigh     -0.098384   0.004950  -19.88   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for Negative Binomial(2.9968) family taken to be 1)
+
+    Null deviance: 115078  on 99999  degrees of freedom
+Residual deviance: 106526  on 99995  degrees of freedom
+AIC: 697081
+
+Number of Fisher Scoring iterations: 1
+
+              Theta:  2.9968 
+          Std. Err.:  0.0163 
+
+ 2 x log-likelihood:  -697068.9330 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare estimated vs true parameters</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>comparison <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Parameter =</span> <span class="fu">names</span>(<span class="fu">coef</span>(simulation_model)),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">True_Value =</span> <span class="fu">c</span>(beta_0, beta_1, beta_2, beta_3, beta_4), <span class="co"># type 2 through type 9 (type 1 is reference)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Estimated =</span> <span class="fu">coef</span>(simulation_model),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Difference =</span> <span class="fu">abs</span>(True_Value <span class="sc">-</span> Estimated),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Recovered =</span> <span class="fu">abs</span>(True_Value <span class="sc">-</span> Estimated) <span class="sc">&lt;</span> <span class="fl">0.3</span>  <span class="co"># Within 0.3 units?</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(comparison, <span class="at">digits =</span> <span class="dv">3</span>, </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">"Parameter Recovery: True vs. Estimated Values"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Parameter Recovery: True vs.&nbsp;Estimated Values</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: right;">True_Value</th>
+<th style="text-align: right;">Estimated</th>
+<th style="text-align: right;">Difference</th>
+<th style="text-align: left;">Recovered</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.080</td>
+<td style="text-align: right;">0.080</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">droughtYes</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.357</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">mean_temp</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.076</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">urban_typeModerate</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.056</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">urban_typeHigh</td>
+<td style="text-align: right;">-0.10</td>
+<td style="text-align: right;">-0.098</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Results:</strong></p>
+<ul>
+<li><strong>Drought effect</strong>: True β₁ = 0.35, Estimated β₁ = 0.35</li>
+<li><strong>Temperature effect</strong>: True β₂ = 0.08, Estimated β₂ = 0.076</li>
+</ul>
+<p>All true parameter values fell within the 95% confidence intervals of the estimates, demonstrating that the model is correctly specified and can reliably estimate effects from data generated according to our assumptions.This validates our modeling approach before applying it to real data.</p>
+</section>
+</section>
+<section id="fit-negative-binomial-model-to-insect-data" class="level1">
+<h1>Fit Negative Binomial model to Insect Data</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>richness_model <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(mean_richness <span class="sc">~</span> Drought <span class="sc">+</span> mean_temp <span class="sc">+</span> Urban_Type, </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">data =</span> site_data</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.063492</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.166667</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 2.269312</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.738095</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 4.650794</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.553571</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 0.583333</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 1.023810</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 1.071429</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 2.410714</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.017857</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 4.829762</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.357143</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 2.273810</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 4.827381</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.095238</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.416171</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 4.648810</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 1.428571</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 1.095238</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 2.238095</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.070933</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.202381</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 2.875000</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 2.629464</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 1.380952</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 4.687169</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.470238</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 4.472321</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dpois(y, mu, log = TRUE): non-integer x = 3.579365</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in theta.ml(Y, mu, sum(w), w, limit = control$maxit, trace =
+control$trace &gt; : iteration limit reached
+Warning in theta.ml(Y, mu, sum(w), w, limit = control$maxit, trace =
+control$trace &gt; : iteration limit reached</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(richness_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm.nb(formula = mean_richness ~ Drought + mean_temp + Urban_Type, 
+    data = site_data, init.theta = 162565.9199, link = log)
+
+Coefficients:
+            Estimate Std. Error z value Pr(&gt;|z|)  
+(Intercept)  2.93302    6.83336   0.429   0.6678  
+DroughtYes   0.41154    0.23658   1.740   0.0819 .
+mean_temp   -0.09536    0.36687  -0.260   0.7949  
+Urban_Type3 -0.04748    0.67747  -0.070   0.9441  
+Urban_Type4 -0.11745    0.62600  -0.188   0.8512  
+Urban_Type5 -0.58294    0.67914  -0.858   0.3907  
+Urban_Type6  0.27350    0.69167   0.395   0.6925  
+Urban_Type8 -0.11049    0.68322  -0.162   0.8715  
+Urban_Type9 -0.26259    0.56526  -0.465   0.6423  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for Negative Binomial(162565.9) family taken to be 1)
+
+    Null deviance: 16.871  on 29  degrees of freedom
+Residual deviance: 10.058  on 21  degrees of freedom
+AIC: 116.03
+
+Number of Fisher Scoring iterations: 1
+
+              Theta:  162566 
+          Std. Err.:  4408446 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -96.031 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(richness_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   2.5 %     97.5 %
+(Intercept) -10.76024877 16.1186822
+DroughtYes   -0.05806419  0.8729860
+mean_temp    -0.80363368  0.6394768
+Urban_Type3  -1.34181009  1.3470880
+Urban_Type4  -1.31018466  1.1853075
+Urban_Type5  -1.90517615  0.8020386
+Urban_Type6  -1.06681324  1.6849387
+Urban_Type8  -1.43479552  1.2816395
+Urban_Type9  -1.31698795  0.9442653</code></pre>
+</div>
+</div>
+</section>
+<section id="test-hypothesis" class="level1">
+<h1>Test Hypothesis</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make predictions </span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Predict richness across Drought levels</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>predict_rich_df <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Drought =</span> <span class="fu">levels</span>(site_data<span class="sc">$</span>Drought), <span class="co"># "No", "Yes"</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">mean_temp =</span> <span class="fu">seq</span>(<span class="fu">min</span>(site_data<span class="sc">$</span>mean_temp),</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">max</span>(site_data<span class="sc">$</span>mean_temp),</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>                  <span class="at">length.out =</span> <span class="dv">200</span>),</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Urban_Type =</span> <span class="fu">levels</span>(site_data<span class="sc">$</span>Urban_Type) <span class="co"># "Less", "Moderate", "High"         </span></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate predictions with standard errors</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>pred_out <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="at">object =</span> richness_model,</span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>                     <span class="at">newdata =</span> predict_rich_df,</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>                     <span class="at">type =</span> <span class="st">"response"</span>,  <span class="co"># Get predictions on count scale</span></span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>                   <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine predictions with original grid</span></span>
+<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a>pred_df <span class="ot">&lt;-</span> predict_rich_df <span class="sc">%&gt;%</span> </span>
+<span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">pred =</span> pred_out<span class="sc">$</span>fit, <span class="co"># Predicted mean richness</span></span>
+<span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">se =</span> pred_out<span class="sc">$</span>se.fit, <span class="co"># Standard error</span></span>
+<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">lower =</span> pred <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> se, <span class="co"># 95% CI lower bound</span></span>
+<span id="cb43-24"><a href="#cb43-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">upper =</span> pred <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> se <span class="co"># 95% CI upper bound</span></span>
+<span id="cb43-25"><a href="#cb43-25" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb43-26"><a href="#cb43-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-27"><a href="#cb43-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview predictions</span></span>
+<span id="cb43-28"><a href="#cb43-28" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(pred_df) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drought</th>
+<th style="text-align: right;">mean_temp</th>
+<th style="text-align: left;">Urban_Type</th>
+<th style="text-align: right;">pred</th>
+<th style="text-align: right;">se</th>
+<th style="text-align: right;">lower</th>
+<th style="text-align: right;">upper</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">No</td>
+<td style="text-align: right;">18.557</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">3.201</td>
+<td style="text-align: right;">1.642</td>
+<td style="text-align: right;">-0.017</td>
+<td style="text-align: right;">6.418</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No</td>
+<td style="text-align: right;">18.557</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">3.052</td>
+<td style="text-align: right;">1.557</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">6.104</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No</td>
+<td style="text-align: right;">18.557</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">2.846</td>
+<td style="text-align: right;">1.168</td>
+<td style="text-align: right;">0.558</td>
+<td style="text-align: right;">5.134</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No</td>
+<td style="text-align: right;">18.557</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">1.787</td>
+<td style="text-align: right;">0.875</td>
+<td style="text-align: right;">0.072</td>
+<td style="text-align: right;">3.502</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No</td>
+<td style="text-align: right;">18.557</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">4.208</td>
+<td style="text-align: right;">1.969</td>
+<td style="text-align: right;">0.349</td>
+<td style="text-align: right;">8.067</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No</td>
+<td style="text-align: right;">18.557</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">2.866</td>
+<td style="text-align: right;">1.406</td>
+<td style="text-align: right;">0.110</td>
+<td style="text-align: right;">5.622</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Main plot: Temperature × Drought interaction</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pred_df, <span class="fu">aes</span>(<span class="at">x =</span> mean_temp, <span class="at">y =</span> pred, <span class="at">color =</span> Drought, <span class="at">fill =</span> Drought)) <span class="sc">+</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lower, <span class="at">ymax =</span> upper), <span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"No"</span> <span class="ot">=</span> <span class="st">"#E69F00"</span>, <span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>),</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">name =</span> <span class="st">"Drought-Tolerant</span><span class="sc">\n</span><span class="st">Plants"</span>) <span class="sc">+</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"No"</span> <span class="ot">=</span> <span class="st">"#E69F00"</span>, <span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>),</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Drought-Tolerant</span><span class="sc">\n</span><span class="st">Plants"</span>) <span class="sc">+</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Urban_Type, <span class="at">nrow =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Predicted Species Richness"</span>,</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Effect of drought plants and temperature across urbanization levels"</span>,</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Mean Temperature (°C)"</span>,</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Predicted Species Richness"</span>) <span class="sc">+</span></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>, <span class="at">face =</span> <span class="st">"bold"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Insect_Diversity_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simpler plot as above Just show drought effect (average across temp and urban)</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>pred_summary <span class="ot">&lt;-</span> pred_df <span class="sc">%&gt;%</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Drought, mean_temp) <span class="sc">%&gt;%</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">pred_mean =</span> <span class="fu">mean</span>(pred),</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">lower_mean =</span> <span class="fu">mean</span>(lower),</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">upper_mean =</span> <span class="fu">mean</span>(upper),</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pred_summary, <span class="fu">aes</span>(<span class="at">x =</span> mean_temp, <span class="at">y =</span> pred_mean, </span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>                         <span class="at">color =</span> Drought, <span class="at">fill =</span> Drought)) <span class="sc">+</span></span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lower_mean, <span class="at">ymax =</span> upper_mean), </span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Add observed data points</span></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> site_data, </span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">x =</span> mean_temp, <span class="at">y =</span> mean_richness, <span class="at">color =</span> Drought),</span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a>             <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"No"</span> <span class="ot">=</span> <span class="st">"#E69F00"</span>, <span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>),</span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a>                     <span class="at">name =</span> <span class="st">"Drought-Tolerant Plants"</span>) <span class="sc">+</span></span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"No"</span> <span class="ot">=</span> <span class="st">"#E69F00"</span>, <span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>),</span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Drought-Tolerant Plants"</span>) <span class="sc">+</span></span>
+<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Drought-Tolerant Plants Increase Species Richness"</span>,</span>
+<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Lines = model predictions | Points = observed data"</span>,</span>
+<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Mean Temperature (°C)"</span>,</span>
+<span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Mean Species Richness"</span>) <span class="sc">+</span></span>
+<span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb45-30"><a href="#cb45-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Insect_Diversity_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="code-data" class="level2">
+<h2 class="anchored" data-anchor-id="code-data">Code &amp; Data</h2>
+<p>All analysis code and data are available at:</p>
+<p>[GitHub repo link]</p>
+<p>Analysis conducted in R version [] using:</p>
+<ul>
+<li>MASS (glm.nb)</li>
+<li>tidyverse (data manipulation)</li>
+<li>ggplot2 (visualization)</li>
+<li>ggdag (causal diagrams)</li>
+</ul>
+</section>
+</section>
+<section id="cite" class="level1">
+<h1>Cite</h1>
+<p>[^2020] Adams, Benjamin; Li, Enjie; Bahlai, Christine et al.&nbsp;(2020). Local and landscape scale variables shape insect diversity in an urban biodiversity hotspot. [Dataset]. Dryad. https://doi.org/10.5061/dryad.7d7wm37rd</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

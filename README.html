@@ -356,19 +356,34 @@ display: none;
 <h1>Urban Insect Biodiversity: Effects of Drought-Tolerant Plants</h1>
 <div id="project-overview" class="section level2">
 <h2>Project Overview</h2>
-<p>This project examines how drought-tolerant landscaping affects insect
-diversity in urban Los Angeles, using data from 30 sites sampled monthly
-across 2014.</p>
+<p>This project statisticaly examines how drought-tolerant landscaping
+affects insect diversity in urban Los Angeles, using data from 30 sites
+sampled monthly across 2014.</p>
 </div>
 <div id="scientific-hypothesis" class="section level2">
 <h2>Scientific Hypothesis</h2>
 <p><strong>Research Question:</strong></p>
-<p>Do drought-tolerant plants increase insect species richness in urban
-Los Angeles?</p>
+<ol style="list-style-type: decimal">
+<li>Do drought-tolerant plants increase insect species richness in urban
+Los Angeles?</li>
+</ol>
+<pre><code>Drought-Tolerant Plants 
+H₀: β₁ = 0 
+
+Hᴀ: β₁ \&gt; 0
+</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Do drought-tolerant plants and local temperature interact to affect
+insect species richness in urban Los Angeles?</li>
+</ol>
+<pre><code>Temperature  
+H₀: β₂ = 0 
+Hᴀ: β₂  0 
+</code></pre>
 <p><strong>Hypothesis:</strong></p>
 <p>Sites with drought-tolerant plants have higher insect species
 richness than sites without drought-tolerant plants, after accounting
-for urbanization level and season.</p>
+for temperature and Urban Type.</p>
 <p><strong>Justification:</strong></p>
 <p>Drought-tolerant plants are better adapted to Los Angeles’s naturally
 arid climate and may provide more suitable habitat for local insect
@@ -379,35 +394,24 @@ watering.</p>
 <h2>Statistical Model</h2>
 <p><strong>Response Variable:</strong></p>
 <ul>
-<li><code>CorRich</code> = Insect species richness (count per trap day)
-- This is COUNT data with overdispersion (variance &gt;&gt; mean)</li>
+<li><code>CorRichne</code> = Insect species richness (count per site
+type)</li>
 </ul>
 <p><strong>Model Family:</strong></p>
 <ul>
 <li>Negative Binomial (handles overdispersion in count data)</li>
 </ul>
 <p><strong>Model Structure:</strong></p>
-<p>Level 1 (observation level):</p>
-<p>CorRich_ij ~ NegativeBinomial(μ_ij, θ)</p>
-<p>log(μ_ij) = β₀ + β₁(Drought_Plants_i) + β₂(Urban_Type_i) +
-β₃(Season_j) + u_i</p>
-<p>Level 2 (site level):</p>
-<p>u_i ~ Normal(0, σ²_site)</p>
-<p>Where:</p>
-<ul>
-<li>μ_ij = expected species richness at site i, time j</li>
-<li>θ = dispersion parameter - β₀ = intercept (baseline richness)</li>
-<li>β₁ = effect of drought-tolerant plants (focal parameter)</li>
-<li>β₂ = effect of urbanization</li>
-<li>β₃ = effect of season</li>
-<li>u_i = random intercept for site i (accounts for repeated
-measures)</li>
-<li>σ²_site = variance among sites</li>
-</ul>
-<p><strong>Link Function:</strong> log link (because we’re modeling
-counts)</p>
-<p><strong>Random Effects:</strong> Site-level random intercept (1|Site)
-to account for 30 sites sampled 12 times each</p>
+<p><span class="math display">\[
+\begin{align}
+Richness \sim \text{Negative Binomial}\,(\mu, \sigma) \\
+log(\mu)
+= \beta_{0} + \beta_{1}\, \text{Drought-Tolerant Plants} + \beta_{2}\,
+\text{Mean Temperature} + \beta_{3} \, \text{Urban Type}
+\end{align}
+\]</span></p>
+<p><strong>Link Function:</strong></p>
+<p>log link (because we’re modeling counts)</p>
 </div>
 <div id="statistical-hypotheses" class="section level2">
 <h2>Statistical Hypotheses</h2>
@@ -416,13 +420,8 @@ Effect):</strong></p>
 <p>H₀: β₁ = 0 (Drought-tolerant plants have no effect on species
 richness)</p>
 <p>Hᴀ: β₁ &gt; 0 (Drought-tolerant plants increase species richness)</p>
-<p><strong>Interpretation:</strong> - If β₁ = 0: No difference in
-richness between sites with/without drought plants - If β₁ &gt; 0: Sites
-with drought plants have higher richness (our prediction) - We’ll use
-exp(β₁) to interpret the multiplicative effect on richness</p>
-<p><strong>Secondary Hypothesis (Urbanization Effect):</strong></p>
-<p>H₀: β₂ = 0 (Urbanization has no effect on species richness)</p>
-<p>Hᴀ: β₂ &lt; 0 (Higher urbanization decreases species richness)</p>
+<p>H₀: β₂ = 0 (Temperature has no effect on richness) Hᴀ: β₂ ≠ 0
+(Temperature affects richness )</p>
 </div>
 <div id="data-description" class="section level2">
 <h2>Data Description</h2>
@@ -433,21 +432,12 @@ biodiversity study</li>
 months)</li>
 <li><strong>Response:</strong> Species richness per trap day</li>
 <li><strong>Key predictors:</strong> Drought-tolerant plants,
-urbanization, season</li>
+urbanization, temperature</li>
 </ul>
-</div>
-<div id="preliminary-results" class="section level2">
-<h2>Preliminary Results</h2>
-<p>Sites with drought-tolerant plants showed 48.9% higher species
-richness (mean = 3.54) compared to sites without (mean = 2.38).</p>
 </div>
 <div id="repository-structure" class="section level2">
 <h2>Repository Structure</h2>
-<pre><code>project/
-├── data/
-├── images/
-├── scripts/
-└── README.md</code></pre>
+<pre><code></code></pre>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
