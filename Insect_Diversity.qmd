@@ -498,10 +498,38 @@ model_summary <- summary(richness_model)
 
 
 ```{r}
+# Get coefficient on log scale
+beta_drought <- coef(richness_model)["DroughtYes"]
+
+# Exponentiate to get rate ratio
+rate_ratio <- exp(beta_drought)
+
+# Calculate percent increase
+percent_increase <- (rate_ratio - 1) * 100
+
+# Exponentiate to get CI on rate ratio scale
+ci_rate_ratio <- exp(beta_drought)
+
+# Get full summary
+model_summary <- summary(richness_model)
+
 # Extract p-value for DroughtYes
 p_value <- model_summary$coefficients["DroughtYes", "Pr(>|z|)"]
+```
 
-cat("P-value:", format.pval(p_value, digits = 3), "\n\n")
+
+```{r}
+results_table <- data.frame(
+  Parameter = "Drought-Tolerant Plants",
+  Coefficient = round(beta_drought, 3),
+  Rate_Ratio = round(rate_ratio, 3),
+  Percent_Increase = round(percent_increase, 1),
+  CI_Lower = round(ci_rate_ratio[1], 3),
+  CI_Upper = round(ci_rate_ratio[2], 3),
+  P_Value = format.pval(p_value, digits = 3)
+)
+
+print(results_table)
 ```
 
 ## Conclusion
