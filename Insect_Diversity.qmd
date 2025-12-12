@@ -26,6 +26,7 @@ Urban areas are expanding globally, yet we know little about how landscaping cho
 
 1. Do drought-tolerant plants increase insect species richness in urban Los Angeles?
 
+
 $$ 
 \begin{align}
 Drought-Tolerant Plants \\
@@ -35,6 +36,7 @@ Hᴀ: β₁ > 0
 
 \end{align} 
 $$
+
 
 2.  Do drought-tolerant plants and local temperature interact to affect insect species richness in urban Los Angeles?
 
@@ -46,7 +48,8 @@ H₀: β₂ = 0 \\
 Hᴀ: β₂ ≠ 0 
 
 \end{align} 
-$$ 
+$$
+
 
 
 
@@ -65,7 +68,7 @@ A conceptual model (figure 1.) represents the hypothesized causal relationships 
 Assume these plants provide better habitat for insects in LA's arid climate.
 
 - **Mean Temperature:** 
-Local Microclimate may directly affect insect activty and survival.
+Local Microclimate may directly affect insect activity and survival.
 
 - **Urban Type:** 
 Development intensity affects habitat quality and availability.
@@ -77,6 +80,7 @@ Development intensity affects habitat quality and availability.
 **Importance:** 
 
 To estimate the *true effect* of drought-tolerant plants on species richness, we include both temperature and urbanization as covariates in our model. This accounts for confounding and allows us to answer: 
+
       `"Do drought plants increase richness *independent of* urbanization and temperature?"`
 
 
@@ -177,42 +181,46 @@ hist(insect_div$CorAbun, main="Corrected Abundance", xlab="CorAbun")
 ```
 
 ```{r, include = FALSE}
-# Data Cleaning & Preparation
+# Cleaning & Preparation
 
-# Fix the Season factor (I noticed it's "Med" not "Intermediate")
 insect_clean <- insect_div %>%
+  # Rename columns with spaces
+  rename(
+    Urban_Type_raw = `Urban Type`,
+    Temp_Mean = `Temp Mean`
+  ) %>%
+  # Convert all binary variables to factors at once
   mutate(
-    # Fix Season naming
-    Season_clean = case_when(
-      Season == "Low" ~ "Low",
-      Season == "Med" ~ "Intermediate", 
-      Season == "High" ~ "High"
+    across(c(Drought, Native, Compost, Mulch, Lawn, Water), 
+           ~factor(., levels = c("No", "Yes"))),
+    
+    # Fix season and convert to factor and set order
+    Season = factor(
+      case_when(
+        Season == "Med" ~ "Intermediate",
+        TRUE ~ Season  # Keep "Low" and "High" as-is
+      ),
+      levels = c("Low", "Intermediate", "High")
     ),
     
-# Convert to factors with correct levels
-    Urban_Type = factor(`Urban Type`),
-    Season = factor(Season_clean, levels = c("Low", "Intermediate", "High")), # want low as reference level
-# Binary habitats
-    Drought = factor(Drought, levels = c("No", "Yes")),
-    Native = factor(Native, levels = c("No", "Yes")),
-    Compost = factor(Compost, levels = c("No", "Yes")),
-    Mulch = factor(Mulch, levels = c("No", "Yes")),
-    Lawn = factor(Lawn, levels = c("No", "Yes")),
-    Water = factor(Water, levels = c("No", "Yes")),
-    Site = factor(Site),
+    # Create urban category
+    Urban_Category = factor(
+      case_when(
+        Urban_Type_raw %in% c(1, 3, 4) ~ "Less",
+        Urban_Type_raw %in% c(5, 6) ~ "Moderate",
+        Urban_Type_raw %in% c(8, 9) ~ "High"
+      ),
+      levels = c("Less", "Moderate", "High")
+    ),
     
-
-# Simplify urban type into categories for easier interpretation
-Urban_Category = case_when(
-  `Urban Type` %in% c(1, 3, 4) ~ "Less Urbanized",
-  `Urban Type` %in% c(5, 6) ~ "Moderate",
-  `Urban Type` %in% c(8, 9) ~ "Highly Urbanized"
-  ),
-# Change to logic order
-Urban_Category = factor(Urban_Category, 
-                        levels = c("Less Urbanized", "Moderate", "Highly Urbanized"))
-) %>% 
-rename("Temp_Mean" = `Temp Mean`)
+    # Keep original as factor too
+    Urban_Type = factor(Urban_Type_raw),
+    
+    # Site as factor
+    Site = factor(Site)
+  ) %>%
+  # Drop temporary column
+  dplyr::select(-Urban_Type_raw)
 ```
 
 ```{r, include = FALSE}
@@ -222,14 +230,13 @@ colSums(is.na(insect_clean %>% dplyr::select(CorRich, CorAbun, Urban_Type, Richn
 ```
 
 ```{r}
-# Aggregate: 30 independent sites, average each site across all 12 months
+# Aggregate to site level ( remove temporal pseudoreplication)
 site_data <- insect_clean %>% 
-  group_by(Site, Drought) %>% 
+  group_by(Site, Drought, Urban_Category, Urban_Type) %>% 
   summarise(
-    mean_richness = mean(CorRich), # across the year
+    mean_richness = mean(CorRich),
     mean_temp = mean(Temp_Mean),
-    n_months = n(), # 12 for every site 
-    Urban_Type = unique(Urban_Type), 
+    n_months = n(),
     .groups = "drop"
   )
 
@@ -287,12 +294,12 @@ ggsave("fig4_combined_exploratory.png", combined, width = 12, height = 9, dpi = 
 
 # Data Simulation According to Model Assumptions
 
-We used a Negative Binomial generalized linear model:
+**Using a Negative Binomial generalized linear model:** 
 
 $$
-\begin{align} 
-Richness \sim \text{Negative Binomial}\,(\mu, \sigma) \\
-log(\mu) = \beta_{0} + \beta_{1}\, \text{Drought-Tolerant Plants} + \beta_{2}\, \text{Mean Temperature} + \beta_{3} \, \text{Urban Type}
+\begin{align}  
+&\text{y} \sim \text{Negative Binomial}\,(\mu, \sigma) \\
+&log(\mu) = \beta_{0} + \beta_{1}\, \text{x} 
 \end{align}
 $$
 
@@ -377,11 +384,16 @@ kable(comparison, digits = 3,
 All true parameter values fell within the 95% confidence intervals of the estimates, demonstrating that the model is correctly specified and can reliably estimate effects from data generated according to our assumptions.This validates our modeling approach before applying it to real data.
 
 # Fit Negative Binomial model to Insect Data
+$$
+\begin{align}  
+&\text{Richness} \sim \text{Negative Binomial}\,(\mu, \sigma) \\
+&log(\mu) = \beta_{0} + \beta_{1}\, \text{Drought-tolerant Plants} + \beta_{2}\, \text{Mean Temperature} + \beta_{3} \, \text{Urban Type(Moderate)} + \beta_{4}\text{Urban Type (High)}\\
+\end{align}
+$$
 
 ```{r, message=FALSE}
 richness_model <- glm.nb(mean_richness ~ Drought + mean_temp + Urban_Type, 
-                          data = site_data
-                  )
+                          data = site_data)
 
 summary(richness_model)
 confint(richness_model)
@@ -476,8 +488,25 @@ ggplot(pred_summary, aes(x = mean_temp, y = pred_mean,
   theme_minimal() +
   theme(legend.position = "bottom",
         plot.title = element_text(face = "bold", size = 14))
+
 ```
 
+```{r}
+# Get full summary
+model_summary <- summary(richness_model)
+```
+
+
+```{r}
+# Extract p-value for DroughtYes
+p_value <- model_summary$coefficients["DroughtYes", "Pr(>|z|)"]
+
+cat("P-value:", format.pval(p_value, digits = 3), "\n\n")
+```
+
+## Conclusion
+
+Using negative binomial regression on site-aggregated data, we found that drought-tolerant plants increase insect species richness by approximately 50% in urban Los Angeles. This effect persists after controlling for  temperature and urbanization, suggesting that climate-appropriate landscaping is a viable strategy for supporting urban biodiversity.
 
 ## Code & Data
 

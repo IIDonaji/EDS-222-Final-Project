@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project statisticaly examines how drought-tolerant landscaping affects insect diversity in urban Los Angeles, using data from 30 sites sampled monthly across 2014.
+This project statistical examines how drought-tolerant landscaping affects insect diversity in urban Los Angeles, using data from 30 sites sampled monthly across 2014.
 
 ## Scientific Hypothesis
 
@@ -10,22 +10,9 @@ This project statisticaly examines how drought-tolerant landscaping affects inse
 
 1.  Do drought-tolerant plants increase insect species richness in urban Los Angeles? 
 
-```
-Drought-Tolerant Plants 
-H₀: β₁ = 0 
 
-Hᴀ: β₁ \> 0
-
-```
 2.  Do drought-tolerant plants and local temperature interact to affect insect species richness in urban Los Angeles?
 
-
-```
-Temperature  
-H₀: β₂ = 0 
-Hᴀ: β₂  0 
-
-```
 **Hypothesis:**
 
 Sites with drought-tolerant plants have higher insect species richness than sites without drought-tolerant plants, after accounting for temperature and Urban Type.
@@ -47,13 +34,11 @@ Drought-tolerant plants are better adapted to Los Angeles's naturally arid clima
 **Model Structure:**
 
 $$
-\begin{align} 
-Richness \sim \text{Negative Binomial}\,(\mu, \sigma) \\
-log(\mu) 
-= \beta_{0} + \beta_{1}\, \text{Drought-Tolerant Plants} + \beta_{2}\, \text{Mean Temperature} + \beta_{3} \, \text{Urban Type}
+\begin{align}  
+&\text{Richness} \sim \text{Negative Binomial}\,(\mu, \sigma) \\
+&log(\mu) = \beta_{0} + \beta_{1}\, \text{Drought-tolerant Plants} + \beta_{2}\, \text{Mean Temperature} + \beta_{3} \, \text{Urban Type(Moderate)} + \beta_{4}\text{Urban Type (High)}\\
 \end{align}
 $$
-
 **Link Function:**
 
 log link (because we're modeling counts)
@@ -61,13 +46,11 @@ log link (because we're modeling counts)
 ## Statistical Hypotheses
 
 **Primary Hypothesis (Drought-Tolerant Plants Effect):**
-
+```
 H₀: β₁ = 0 (Drought-tolerant plants have no effect on species richness)
 
 Hᴀ: β₁ \> 0 (Drought-tolerant plants increase species richness)
-
-H₀: β₂ = 0 (Temperature has no effect on richness) Hᴀ: β₂ ≠ 0 (Temperature affects richness )
-
+```
 ## Data Description
 
 -   **Source:** Adams et al. (2020) - Los Angeles urban biodiversity study
@@ -77,7 +60,17 @@ H₀: β₂ = 0 (Temperature has no effect on richness) Hᴀ: β₂ ≠ 0 (Tempe
 
 ## Repository Structure
 
-```         
+``` 
+├── data
+│   ├── Adams_et_al_Ecological_Applications_data.xlsx
+│   └── InsectData.csv
+├── EDS-222-Final-Project.Rproj
+├── fig4_combined_exploratory.png
+├── Insect_Diversity.html
+├── Insect_Diversity.qmd
+├── LICENSE
+├── README.html
+└── README.md
 ```
 
 ## References

@@ -356,7 +356,7 @@ display: none;
 <h1>Urban Insect Biodiversity: Effects of Drought-Tolerant Plants</h1>
 <div id="project-overview" class="section level2">
 <h2>Project Overview</h2>
-<p>This project statisticaly examines how drought-tolerant landscaping
+<p>This project statistical examines how drought-tolerant landscaping
 affects insect diversity in urban Los Angeles, using data from 30 sites
 sampled monthly across 2014.</p>
 </div>
@@ -370,7 +370,7 @@ Los Angeles?</li>
 <pre><code>Drought-Tolerant Plants 
 H₀: β₁ = 0 
 
-Hᴀ: β₁ \&gt; 0
+Hᴀ: β₁ &gt; 0
 </code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Do drought-tolerant plants and local temperature interact to affect
@@ -378,7 +378,7 @@ insect species richness in urban Los Angeles?</li>
 </ol>
 <pre><code>Temperature  
 H₀: β₂ = 0 
-Hᴀ: β₂  0 
+Hᴀ: β₂ ≠  0 
 </code></pre>
 <p><strong>Hypothesis:</strong></p>
 <p>Sites with drought-tolerant plants have higher insect species
@@ -403,14 +403,13 @@ type)</li>
 </ul>
 <p><strong>Model Structure:</strong></p>
 <p><span class="math display">\[
-\begin{align}
-Richness \sim \text{Negative Binomial}\,(\mu, \sigma) \\
-log(\mu)
-= \beta_{0} + \beta_{1}\, \text{Drought-Tolerant Plants} + \beta_{2}\,
-\text{Mean Temperature} + \beta_{3} \, \text{Urban Type}
+\begin{align}  
+&amp;\text{Richness} \sim \text{Negative Binomial}\,(\mu, \sigma) \\
+&amp;log(\mu) = \beta_{0} + \beta_{1}\, \text{Drought-tolerant Plants} +
+\beta_{2}\, \text{Mean Temperature} + \beta_{3} \, \text{Urban
+Type(Moderate)} + \beta_{4}\text{Urban Type (High)}\\
 \end{align}
-\]</span></p>
-<p><strong>Link Function:</strong></p>
+\]</span> <strong>Link Function:</strong></p>
 <p>log link (because we’re modeling counts)</p>
 </div>
 <div id="statistical-hypotheses" class="section level2">
