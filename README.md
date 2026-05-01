@@ -31,12 +31,12 @@ Drought-tolerant plants are better adapted to Los Angeles's naturally arid clima
 
 **Model Structure:**
 
-$$
+```math
 \begin{align}  
-&\text{Richness} \sim \text{Negative Binomial}\,(\mu, \sigma) \\
+&\text{Richness} \sim \text{Negative Binomial}\,(\mu, \theta) \\
 &log(\mu) = \beta_{0} + \beta_{1}\, \text{Drought-tolerant Plants} + \beta_{2}\, \text{Mean Temperature} + \beta_{3} \, \text{Urban Type(Moderate)} + \beta_{4}\text{Urban Type (High)}\\
 \end{align}
-$$
+```
 **Link Function:**
 
 log link (because we're modeling counts)
