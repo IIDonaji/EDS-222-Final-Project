@@ -59,16 +59,20 @@ Hᴀ: β₁ \> 0 (Drought-tolerant plants increase species richness)
 ## Repository Structure
 
 ``` 
-├── data
-│   ├── Adams_et_al_Ecological_Applications_data.xlsx
-│   └── InsectData.csv
-├── EDS-222-Final-Project.Rproj
-├── fig4_combined_exploratory.png
-├── Insect_Diversity.html
-├── Insect_Diversity.qmd
-├── LICENSE
-├── README.html
-└── README.md
+│   .gitignore
+│   EDS-222-Final-Project.Rproj
+│   Insect_Diversity.qmd
+│   LICENSE
+│   README.html
+│   README.md
+│
+├───data
+│       insect-raw-data.csv
+│
+├───figures
+│       combined_exploratory.png
+│       main_plot.png
+│       simple_plot.png
 ```
 
 ## References
