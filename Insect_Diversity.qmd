@@ -16,11 +16,15 @@ library(kableExtra)
 library(MASS)
 library(dagitty)
 library(ggdag)
+
+# Load Data
+insect <- read_csv(here("data/insect-raw-data.csv"))
+#view(insect)
 ```
 
 ## Background Information
 
-Urban areas are expanding globally, yet we know little about how landscaping choice affect urban biodiversity. Los Angeles, a naturally arid Mediterranean climate, presents a unique opportunity to examine whether drought-tolerant landscaping supports insect diversity. 
+Urban areas are expanding globally, yet we know little about how landscaping choices affect urban biodiversity. Los Angeles, a naturally arid Mediterranean climate, presents a unique opportunity to examine whether drought-tolerant landscaping supports insect diversity. 
 
 **Research Questions:** 
 
@@ -49,10 +53,6 @@ Hᴀ: β₂ ≠ 0
 
 \end{align} 
 $$
-
-
-
-
 **Hypothesis:**
 
 Sites with drought-tolerant plants have higher insect species richness than sites without drought-tolerant plants, after accounting for temperature and Urban Type.
@@ -60,7 +60,7 @@ Sites with drought-tolerant plants have higher insect species richness than site
 
 # Directed Acyclic Graph (DAG)
 
-A conceptual model (figure 1.) represents the hypothesized causal relationships among variables:
+A conceptual model representing the hypothesized causal relationships among variables:
 
 **Direct effect on species richness:**
 
@@ -144,46 +144,33 @@ ggdag(insect_dag, text = FALSE, use_labels = "label") +
   
 The causal model shows that urbanization is a key confounder: it affects both plant choice and local temperature while also directly impacting species richness.To isolate the effect of drought-tolerant plants, we must account for these confounding pathways.
 
-
-
-# About the data:
-
-The data used for this analysis was obtained from Adams et al. (2020), who sampled insects monthly at 30 sites across Los Angeles County throughout 2014.
-
-# Befoe Modeling:
-**Site-level aggregation:** To avoid pseudoreplication from repeated monthly sampling, we averaged species richness and temperature across the year for each site, yielding 30 independent observations.
-
-```{r,include = FALSE}
-# Data Loading
-insect_div <- read_csv("data/InsectData.csv")
-#view(insect_div)
-```
+# Data explartion and cleaning
 
 ```{r, include = FALSE}
 # Data Exploration
-str(insect_div)
-skim(insect_div)
-colSums(is.na(insect_div))
+str(insect)
+skim(insect)
+colSums(is.na(insect))
         
 ```
 
 ```{r,include = FALSE}
 # Summary of Key Response Variables 
-summary(insect_div[,c("Richness", "Abundance", "CorRich", "CorAbun")])
+summary(insect[,c("Richness", "Abundance", "CorRich", "CorAbun")])
 
 
 # Distribution Plots
 par(mfrow=c(2,2))
-hist(insect_div$Richness, main="Richness Distribution", xlab="Species Richness")
-hist(insect_div$Abundance, main="Abundance Distribution", xlab="Abundance")
-hist(insect_div$CorRich, main="Corrected Richness", xlab="CorRich")
-hist(insect_div$CorAbun, main="Corrected Abundance", xlab="CorAbun")
+hist(insect$Richness, main="Richness Distribution", xlab="Species Richness")
+hist(insect$Abundance, main="Abundance Distribution", xlab="Abundance")
+hist(insect$CorRich, main="Corrected Richness", xlab="CorRich")
+hist(insect$CorAbun, main="Corrected Abundance", xlab="CorAbun")
 ```
 
 ```{r, include = FALSE}
 # Cleaning & Preparation
 
-insect_clean <- insect_div %>%
+insect_clean <- insect %>%
   # Rename columns with spaces
   rename(
     Urban_Type_raw = `Urban Type`,
@@ -229,8 +216,11 @@ colSums(is.na(insect_clean %>% dplyr::select(CorRich, CorAbun, Urban_Type, Richn
                                       Drought, Season, PCA1, PCA2, Site)))
 ```
 
+### Before Modeling:
+**Site-level aggregation:** To avoid pseudoreplication from repeated monthly sampling, I averaged species richness and temperature across the year for each site, yielding 30 independent observations.
+
 ```{r}
-# Aggregate to site level ( remove temporal pseudoreplication)
+# Aggregate to site level (remove temporal pseudoreplication)
 site_data <- insect_clean %>% 
   group_by(Site, Drought, Urban_Category, Urban_Type) %>% 
   summarise(
@@ -287,9 +277,8 @@ combined <- (p1 | p2) / p3 +
     title = "Exploratory Analysis: Three Key Predictors",
     theme = theme(plot.title = element_text(size = 14, face = "bold"))
   )
-
 print(combined)
-ggsave("fig4_combined_exploratory.png", combined, width = 12, height = 9, dpi = 300)
+ggsave(here("figures","combined_exploratory.png"), combined, width = 12, height = 9, dpi = 300)
 ```
 
 # Data Simulation According to Model Assumptions
@@ -317,7 +306,7 @@ $$
 
 ## Model Validation: Parameter Recovery
 
-To demonstrate our model is correctly specified, we first simulated data with known parameter values, then fit our model to recover those parameters.
+To demonstrate the model is correctly specified, I first simulated data with known parameter values, then fit our model to recover those parameters.
 
 Below we will use the `glm.nb` function from the `MASS` package to estimate negative binomial regressions:
 
@@ -372,7 +361,7 @@ comparison <- tibble(
   Recovered = abs(True_Value - Estimated) < 0.3  # Within 0.3 units?
 )
 
-kable(comparison, digits = 3, 
+kable(comparison, digits = 3, # 3 decimal places
       caption = "Parameter Recovery: True vs. Estimated Values")
 ```
 
@@ -437,7 +426,7 @@ head(pred_df) %>% kable(digits = 3)
 #| fig-height: 6
 
 # Main plot: Temperature × Drought interaction
-ggplot(pred_df, aes(x = mean_temp, y = pred, color = Drought, fill = Drought)) +
+main_plot <- ggplot(pred_df, aes(x = mean_temp, y = pred, color = Drought, fill = Drought)) +
   geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, color = NA) +
   geom_line(size = 1.5) +
   scale_color_manual(values = c("No" = "#E69F00", "Yes" = "#009E73"),
@@ -453,7 +442,7 @@ ggplot(pred_df, aes(x = mean_temp, y = pred, color = Drought, fill = Drought)) +
   theme(legend.position = "bottom",
         strip.text = element_text(size = 11, face = "bold"))
 
-
+ggsave(here("figures","main_plot.png"), main_plot, width = 12, height = 9, dpi = 300)
 ```
 
 ```{r, message=FALSE}
@@ -468,7 +457,7 @@ pred_summary <- pred_df %>%
     .groups = "drop"
   )
 
-ggplot(pred_summary, aes(x = mean_temp, y = pred_mean, 
+simple_plot <- ggplot(pred_summary, aes(x = mean_temp, y = pred_mean, 
                          color = Drought, fill = Drought)) +
   geom_ribbon(aes(ymin = lower_mean, ymax = upper_mean), 
               alpha = 0.2, color = NA) +
@@ -488,6 +477,7 @@ ggplot(pred_summary, aes(x = mean_temp, y = pred_mean,
   theme_minimal() +
   theme(legend.position = "bottom",
         plot.title = element_text(face = "bold", size = 14))
+ggsave(here("figures","simple_plot.png"), simple_plot, width = 12, height = 9, dpi = 300)
 
 ```
 
@@ -508,7 +498,7 @@ rate_ratio <- exp(beta_drought)
 percent_increase <- (rate_ratio - 1) * 100
 
 # Exponentiate to get CI on rate ratio scale
-ci_rate_ratio <- exp(beta_drought)
+ci_rate_ratio <- exp(confint(richness_model)["DroughtYes",])
 
 # Get full summary
 model_summary <- summary(richness_model)
@@ -534,20 +524,11 @@ print(results_table)
 
 ## Conclusion
 
-Using negative binomial regression on site-aggregated data, we found that drought-tolerant plants increase insect species richness by approximately 50% in urban Los Angeles. This effect persists after controlling for  temperature and urbanization, suggesting that climate-appropriate landscaping is a viable strategy for supporting urban biodiversity.
+Using negative binomial regression on site-aggregated data, I found that drought-tolerant plants increase insect species richness by approximately 50% in urban Los Angeles. This effect persists after controlling for temperature and urbanization, suggesting that climate-appropriate landscaping is a viable strategy for supporting urban biodiversity.
 
-## Code & Data
+# About the data:
 
-All analysis code and data are available at: 
-
-[GitHub repo link]
-
-Analysis conducted in R version [] using:
-
-- MASS (glm.nb)
-- tidyverse (data manipulation)
-- ggplot2 (visualization)
-- ggdag (causal diagrams)
+The data used for this analysis was obtained from Adams et al.(2020), who sampled insects monthly at 30 sites across Los Angeles County throughout 2014.
 
 # Cite
 

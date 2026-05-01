@@ -1,16 +1,14 @@
-# Urban Insect Biodiversity: Effects of Drought-Tolerant Plants
+# Urban Insect Biodiversity: The Effects of Drought-Tolerant Plants an Analytical Approach
 
 ## Project Overview
 
-This project statistical examines how drought-tolerant landscaping affects insect diversity in urban Los Angeles, using data from 30 sites sampled monthly across 2014.
+This repository contains files for my final project for EDS 222 - Statistics for Environmental Data Science.Here I fatalistically examined how drought-tolerant landscaping affects insect diversity in urban Los Angeles, using data from 30 sites sampled monthly across 2014.
 
 ## Scientific Hypothesis
 
 **Research Question:**
 
 1.  Do drought-tolerant plants increase insect species richness in urban Los Angeles? 
-
-
 2.  Do drought-tolerant plants and local temperature interact to affect insect species richness in urban Los Angeles?
 
 **Hypothesis:**
@@ -25,7 +23,7 @@ Drought-tolerant plants are better adapted to Los Angeles's naturally arid clima
 
 **Response Variable:**
 
--   `CorRichne` = Insect species richness (count per site type)
+-   `CorRichn` = Insect species richness (count per site type)
 
 **Model Family:**
 
@@ -75,4 +73,7 @@ Hᴀ: β₁ \> 0 (Drought-tolerant plants increase species richness)
 
 ## References
 
-Adams, B. J., et al. (2020). Local- and landscape-scale variables shape insect diversity in an urban biodiversity hot spot. Ecological Applications, 30(4), e02089.
+Adams, B. J., et al. (2020). Local- and landscape-scale variables shape insect diversity in an urban biodiversity hot spot. Ecological Applications, 30(4), [e02089.]( https://doi.org/10.1002/eap.2089)
+
+## Acknowledgements
+This repository was created as a final project for the graduate course EDS 222: Statitistics for Environmental Data Science in the [Masters of Environmental Data Science (MEDS) program](https://bren.ucsb.edu/masters-programs/master-environmental-data-science), taught by Dr.[Max Czapanskiy](https://bren.ucsb.edu/people/max-czapanskiy)
