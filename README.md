@@ -76,8 +76,8 @@ Hᴀ: β₁ \> 0 (Drought-tolerant plants increase species richness)
 ```
 
 ## References
-
 Adams, B. J., et al. (2020). Local- and landscape-scale variables shape insect diversity in an urban biodiversity hot spot. Ecological Applications, 30(4), [e02089.]( https://doi.org/10.1002/eap.2089)
+[Data Access](https://doi.org/10.5061/dryad.7d7wm37rd)
 
 ## Acknowledgements
 This repository was created as a final project for the graduate course EDS 222: Statitistics for Environmental Data Science in the [Masters of Environmental Data Science (MEDS) program](https://bren.ucsb.edu/masters-programs/master-environmental-data-science), taught by Dr.[Max Czapanskiy](https://bren.ucsb.edu/people/max-czapanskiy)
