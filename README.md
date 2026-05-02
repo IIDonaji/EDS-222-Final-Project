@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-This repository contains files for my final project for EDS 222 - Statistics for Environmental Data Science.Here I fatalistically examined how drought-tolerant landscaping affects insect diversity in urban Los Angeles, using data from 30 sites sampled monthly across 2014.
+This repository contains files on my final project for EDS 222 - Statistics for Environmental Data Science. Here I statistically examined how drought-tolerant landscaping affects insect diversity in urban Los Angeles, using data from 30 sites sampled monthly across 2014.
+
+[Read the full blog on my website](https://iidonaji.github.io/posts/2025-12-12-EDS222_Blog/Insect_Diversity.html)
 
 ## Scientific Hypothesis
 
@@ -23,7 +25,7 @@ Drought-tolerant plants are better adapted to Los Angeles's naturally arid clima
 
 **Response Variable:**
 
--   `CorRichn` = Insect species richness (count per site type)
+-   `CorRichness` = Insect species richness (count per site type)
 
 **Model Family:**
 
@@ -39,7 +41,7 @@ Drought-tolerant plants are better adapted to Los Angeles's naturally arid clima
 ```
 **Link Function:**
 
-log link (because we're modeling counts)
+log link to model postive-value data, such as counts.
 
 ## Statistical Hypotheses
 
@@ -77,7 +79,8 @@ Hᴀ: β₁ \> 0 (Drought-tolerant plants increase species richness)
 
 ## References
 Adams, B. J., et al. (2020). Local- and landscape-scale variables shape insect diversity in an urban biodiversity hot spot. Ecological Applications, 30(4), [e02089.]( https://doi.org/10.1002/eap.2089)
+
 [Data Access](https://doi.org/10.5061/dryad.7d7wm37rd)
 
 ## Acknowledgements
-This repository was created as a final project for the graduate course EDS 222: Statitistics for Environmental Data Science in the [Masters of Environmental Data Science (MEDS) program](https://bren.ucsb.edu/masters-programs/master-environmental-data-science), taught by Dr.[Max Czapanskiy](https://bren.ucsb.edu/people/max-czapanskiy)
+This repository was created as a final project for the graduate course EDS 222: Statitistics for Environmental Data Science in the [Masters of Environmental Data Science (MEDS) program](https://bren.ucsb.edu/masters-programs/master-environmental-data-science), taught by Dr.[ Max Czapanskiy](https://bren.ucsb.edu/people/max-czapanskiy)
